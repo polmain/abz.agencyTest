@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <header class="not-container">
+        <div class="logo">
+            <a href="/"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="login button-green">
+            Log In Now
+        </div>
+    </header>
+    <div class="slider">
+        <div class="wrapper">
+            <h2>Home of Dentistry</h2>
+            <p>Denteez was created by dentists for dentistry in order to make the life of everyone involved in dentistry easier.</p>
+        </div>
+    </div>
+    <div class="main">
+        <section class="feedback-form">
+            <div class="container">
+                <form id="support" method="post">
+                    <input type="hidden" value="1" name="department">
+                    <div class="inputs-container">
+                        <div class="note">Fields marked “*” are required</div>
+                        <div class="control-box">
+                            <label for="enquiry-type">Enquiry Type *</label>
+                            <select name="enquiry_type" id="enquiry-type"></select>
+                            <div class="hide-input">
+                                <input type="text" name="other">
+                            </div>
+                        </div>
+                        <div class="control-box box-2">
+                            <div class="control-2">
+                                <label for="user-name">Name *</label>
+                                <input type="text" name="user_name" id="user-name">
+                            </div>
+                            <div class="control-2">
+                                <label for="email">Email *</label>
+                                <input type="text" name="email" id="email">
+                            </div>
+                        </div>
+                        <div class="control-box">
+                            <label for="subject">Subject *</label>
+                            <input type="text" name="subject" id="subject">
+                        </div>
+                        <div class="control-box">
+                            <label for="description">Description *</label>
+                            <div class="count-symbols">(0/1000)</div>
+                            <textarea name="description" id="description" maxlength="1000"></textarea>
+                        </div>
+                        <div class="photo-container">
+                            <div class="input-file">
+                                <input type="file" id="inputImage"  name="file">
+                                <div class="input-file-text">
+                                    <label for="inputImage">Add photo</label>
+                                    <div class="file-requirements">Minimum size of 300x300 jpeg jpg png 5 MB</div>
+                                </div>
+                            </div>
+                            <div id="image_preview">
+
+                            </div>
+                            <small id="imageMessage" class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container cont-1280">
+                <h2>About Denteez</h2>
+                <div class="description">
+                    <p>Why is it always so difficult to find what you are looking for in dentistry? Whether it is the latest advancement in technology or techniques or simply a review or understanding of the vast amount of products? Perhaps finding someone to just fix your broken equipment or simply hiring new staff or looking for that new job?</p>
+                    <p>Our mission is to give every dental professional the possibility to discuss and share all aspects of their profession, their practice and their business. We aim to make the world of dentistry easy and accessible, so every dental professional can find what they are looking for quickly and easily all in one place.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container cont-1280">
+            <div class="copyright">
+                Denteez Copyright 2015
+            </div>
+            <div class="footer-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal modal-error">
+        <div class="modal-header">
+            <h3>Error <span class="code-error"></span></h3>
+            <div class="modal-close">x</div>
+        </div>
+        <div class="modal-body">
+            <div class="subject"></div>
+            <div class="message"></div>
+        </div>
+    </div>
+    <div class="modal modal-success">
+        <div class="modal-header">
+            <h3>Success</h3>
+            <div class="modal-close">x</div>
+        </div>
+        <div class="modal-body">
+            <div class="message"></div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+<script src="scripts/app.min.js"></script>
+
+</body>
+</html>
