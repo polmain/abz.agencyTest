@@ -5,6 +5,8 @@ const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
 const concat      = require('gulp-concat');
 const uglify      = require('gulp-uglifyjs');
+const uglify      = require('gulp-uglifyjs');
+const del         = require('del');
 
 
 gulp.task('default', ['css-min','img-min', 'scripts', 'html']);
@@ -16,12 +18,11 @@ gulp.task('css-min',function () {
 	])
 		.pipe(concat('app.min.css'))
 		.pipe(cssmin())
-		//.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('dist/css'))
 		.pipe(browserSync.reload({stream: true}));
 })
 
-gulp.task('watch',['browser-sync', 'css-min','img-min', 'scripts','html'], function() {
+gulp.task('watch',['clean', 'browser-sync', 'css-min','img-min', 'scripts','html'], function() {
 	gulp.watch('src/**/*.css', ['css-min']);
 	gulp.watch('src/img/*', ['img-min']);
 	gulp.watch('src/scripts/*', ['scripts']);
@@ -59,4 +60,8 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false
 	});
+});
+
+gulp.task('clean', function() {
+	return del.sync('dist');
 });
