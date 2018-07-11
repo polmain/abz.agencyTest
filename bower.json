@@ -1,0 +1,24 @@
+{
+  "name": "abz.agency.test",
+  "description": "Test assignment for Junior/Middle Frontend Developer position",
+  "main": "index.js",
+  "authors": [
+    "polmain"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "^1.17.0",
+    "jquery": "^3.3.1",
+    "select2": "^4.0.5"
+  }
+}
